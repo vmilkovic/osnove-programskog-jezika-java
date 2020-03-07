@@ -1,4 +1,4 @@
-package predavanje1;
+package predavanja2019.predavanje1;
 
 public class Lampa {
 
