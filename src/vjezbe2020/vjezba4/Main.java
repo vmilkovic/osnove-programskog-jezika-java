@@ -4,28 +4,38 @@ public class Main {
 
     public static void main(String[] args){
 
-        Company company = new Company("Bayer", "Belupo");
-        Office koprivnica = new Office("Koprivnica", company);
-        Office zagreb = new Office("Zagreb", company);
+        Group pfizer  = new Group("Pfizer");
 
-        System.out.println(koprivnica.getCompanyName());
-        System.out.println(koprivnica.getGroupName());
-        System.out.println(koprivnica.getLocation());
+        Company Johnson = new Company("Johnson & Johnson", pfizer);
+        Company Bayer = new Company("Roche", pfizer);
 
-        koprivnica.addToStorage("Voltaren", 20);
-        koprivnica.addToStorage("Lupocet", 44);
-        koprivnica.addToStorage("Dermazin", 55);
+        Office newYork = new Office("New York", Johnson);
+        Office paris = new Office("Paris", Johnson);
 
-        koprivnica.showStorage();
+        System.out.println(newYork.getGroupName());
+        System.out.println(Johnson.getCompanyName());
+        System.out.println(newYork.getLocation());
 
-        koprivnica.removeFromStorage("Lupocet", 4);
-        koprivnica.removeFromStorage("Dermazin", 5);
-        koprivnica.removeFromStorage("Voltaren", "all");
+        newYork.addToStorage("Zaštitne rukavice", "20", "30 i 50", "bijele i crne");
+        newYork.addToStorage("Lupocet", "44");
+        newYork.addToStorage("Dermazin", "55");
 
-        zagreb.addToStorage("Salicilna kiselina", 800);
+        paris.addToStorage("Salicilna kiselina", "800");
 
-        koprivnica.showStorage();
-        zagreb.showStorage();
+        Office london = new Office("London", Bayer);
+        Office berlin = new Office("Berlin", Bayer);
+
+        newYork.addToStorage("Zaštitne maske", "20", "30 i 50");
+        newYork.addToStorage("Lupocet", "44");
+
+        berlin.addToStorage("Prašak", "20");
+        berlin.addToStorage("Maxitrol", "400");
+
+        newYork.showStorage();
+        berlin.showStorage();
+        paris.showStorage();
+        london.showStorage();
+
 
     }
 
