@@ -1,4 +1,4 @@
-package vjezbe2019.vjezbe4;
+package vjezbe2019.vjezba4;
 
 public class MojaAutoTrgovina {
     public static void main(String[] args) {

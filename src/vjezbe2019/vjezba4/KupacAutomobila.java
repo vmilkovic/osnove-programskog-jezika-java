@@ -1,4 +1,4 @@
-package vjezbe2019.vjezbe4;
+package vjezbe2019.vjezba4;
 
 public class KupacAutomobila {
     String ime;
